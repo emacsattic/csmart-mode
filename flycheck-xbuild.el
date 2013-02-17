@@ -28,7 +28,7 @@
 
 (flycheck-declare-checker xbuild-csproj
   "A .Net project checker using mono xbuild."
-  :command '("xbuild" (eval csmart-find-buffer-csproj))
+  :command '("xbuild" (eval (csmart-find-buffer-csproj)))
   :error-patterns
   '(("^.*?\\(?1:[^/]+\\)(\\(?2:[0-9]+\\)\\(?:,[0-9]+\\)?): error \\(?4:.+\\)$" error))
   :predicate '(csmart-find-buffer-csproj)
